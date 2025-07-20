@@ -1,0 +1,49 @@
+{
+  "name": "ikeru-countdown",
+  "description": "高精度ミリ秒対応カウントダウンタイマー - イケてるカウントダウン",
+  "version": "1.0.0",
+  "type": "module",
+  "keywords": [
+    "カウントダウンタイマー",
+    "タイマー",
+    "ストップウォッチ",
+    "プレゼンタイマー",
+    "料理タイマー",
+    "ミリ秒",
+    "全画面",
+    "オンライン",
+    "無料",
+    "React",
+    "TypeScript"
+  ],
+  "homepage": "https://your-domain.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/ikeru-countdown.git"
+  },
+  "author": "イケてるカウントダウン",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.35.1",
+    "vite": "^7.0.4"
+  }
+}
