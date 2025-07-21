@@ -1,69 +1,60 @@
-# React + TypeScript + Vite
+# イケてるカウントダウン - 高精度ミリ秒対応タイマー
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**モダンなデザインの無料オンラインカウントダウンタイマー**
 
-Currently, two official plugins are available:
+プレゼンテーション、料理、ワークアウト、勉強に最適な高精度カウントダウンタイマーです。ミリ秒まで細かく設定可能で、白を基調とした洗練されたデザインが特徴です。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ 主な機能
 
-## Expanding the ESLint configuration
+- 🎯 **ミリ秒精度** - 分・秒・ミリ秒まで細かく設定可能
+- 🖥️ **全画面表示** - プレゼンや大画面での使用に最適
+- 🌙 **テーマ切替** - フルスクリーン時のダーク/ライトモード
+- 🔊 **音声アラート** - タイマー終了時の通知機能
+- 📱 **レスポンシブ** - PC・タブレット・スマートフォン対応
+- ⚡ **高速起動** - ブラウザですぐに使用開始
+- 🎨 **モダンUI** - 白背景ベースの洗練されたデザイン
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 技術スタック
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+このプロジェクトは最新のWeb技術で構築されています：
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React 18** + **TypeScript** - 型安全な最新フロントエンド
+- **Vite** - 高速ビルドツール
+- **CSS Modules** - コンポーネントスコープのスタイリング
+- **PWA対応** - オフライン使用とホーム画面追加
+- **SEO最適化** - 検索エンジン向け最適化済み
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ 開発・ビルド
+
+```bash
+# 依存関係のインストール
+npm install
+
+# 開発サーバー起動
+npm run dev
+
+# プロダクションビルド
+npm run build
+
+# プレビュー
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📊 SEO・アクセシビリティ
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- ✅ セマンティックHTML構造
+- ✅ 構造化データ対応
+- ✅ OGPタグ完備
+- ✅ サイトマップ・robots.txt自動生成
+- ✅ アクセシビリティ準拠
+- ✅ パフォーマンス最適化
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🎨 デザインコンセプト
+
+白を基調としたクリーンで現代的なデザインを採用。視認性とユーザビリティを重視し、どんな環境でも快適に使用できます。
+
+---
+
+## 📝 ライセンス・開発情報
+
+React + TypeScript + Vite テンプレートベースで開発
