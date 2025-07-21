@@ -10,8 +10,8 @@ import type { TimerConfig } from "./types/timer";
 import styles from "./App.module.css";
 
 const initialConfig: TimerConfig = {
-  minutes: 5,
-  seconds: 0,
+  minutes: 0,
+  seconds: 30,
   milliseconds: 0,
 };
 
