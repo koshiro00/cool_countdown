@@ -25,6 +25,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/generate-static-files.js && node scripts/update-html-domain.js",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
