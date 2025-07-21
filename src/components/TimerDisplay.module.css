@@ -1,26 +1,40 @@
 .display {
-  font-size: 4rem;
+  font-size: 3.75rem;
   font-weight: 700;
-  margin: 30px 0;
+  margin: 32px 0;
   font-family: "Inter", "Roboto", sans-serif;
-  letter-spacing: 4px;
+  letter-spacing: 0.08em;
   font-variant-numeric: tabular-nums;
-  width: 280px;
+  color: #0f172a;
+  text-align: center;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #1e293b, #475569);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .finished {
-  animation: pulse 1s infinite;
-  color: #ff6b6b;
+  animation: pulse 1.5s ease-in-out infinite;
+  background: linear-gradient(135deg, #ef4444, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 8px rgba(239, 68, 68, 0.3));
 }
 
 @keyframes pulse {
   0% {
     transform: scale(1);
+    opacity: 1;
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.02);
+    opacity: 0.9;
   }
   100% {
     transform: scale(1);
+    opacity: 1;
   }
 }

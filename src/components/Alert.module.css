@@ -1,11 +1,29 @@
 .alert {
   position: fixed;
-  top: 20px;
+  top: 24px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(244, 67, 54, 0.9);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  background: #ffffff;
+  color: #ef4444;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: 2px solid #fecaca;
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   z-index: 1000;
+  font-weight: 600;
+  font-size: 0.875rem;
+  backdrop-filter: blur(8px);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
