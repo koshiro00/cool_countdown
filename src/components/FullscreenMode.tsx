@@ -59,7 +59,17 @@ export const FullscreenMode: React.FC<FullscreenModeProps> = ({
           isFinished ? styles.finished : ""
         }`}
       >
-        {formatTime(totalMilliseconds)}
+        {/* "mm:ss:SS" 形式で表示 */}
+        {formatTime(totalMilliseconds)
+          .split(":")
+          .map((part, index, array) => (
+            <React.Fragment key={index}>
+              {part}
+              {index < array.length - 1 && (
+                <span className={styles.colon}>:</span>
+              )}
+            </React.Fragment>
+          ))}
       </div>
     </div>
   );

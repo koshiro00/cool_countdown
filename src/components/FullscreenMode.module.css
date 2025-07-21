@@ -143,6 +143,11 @@
   animation: pulse 1s infinite;
   color: #ff6b6b !important;
 }
+.colon {
+  font-size: 0.8em;
+  position: relative;
+  top: -0.18em;
+}
 
 @keyframes pulse {
   0% {
