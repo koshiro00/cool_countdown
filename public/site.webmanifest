@@ -4,8 +4,8 @@
   "description": "分・秒・ミリ秒まで設定可能な高精度カウントダウンタイマー",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#667eea",
-  "theme_color": "#667eea",
+  "background_color": "#2563eb",
+  "theme_color": "#2563eb",
   "orientation": "any",
   "icons": [
     {
