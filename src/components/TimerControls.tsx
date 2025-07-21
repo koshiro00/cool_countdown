@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./TimerControls.module.css";
 
 interface TimerControlsProps {
   isRunning: boolean;
@@ -14,17 +15,17 @@ export const TimerControls: React.FC<TimerControlsProps> = ({
   onReset,
 }) => {
   return (
-    <div className="controls">
+    <div className={styles.controls}>
       {!isRunning ? (
-        <button className="start-btn" onClick={onStart}>
+        <button className={styles.startBtn} onClick={onStart}>
           スタート
         </button>
       ) : (
-        <button className="pause-btn" onClick={onPause}>
+        <button className={styles.pauseBtn} onClick={onPause}>
           一時停止
         </button>
       )}
-      <button className="reset-btn" onClick={onReset}>
+      <button className={styles.resetBtn} onClick={onReset}>
         リセット
       </button>
     </div>

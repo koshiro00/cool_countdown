@@ -1,5 +1,6 @@
 import React from "react";
 import type { TimerConfig } from "../types/timer";
+import styles from "./TimerInputs.module.css";
 
 interface TimerInputsProps {
   config: TimerConfig;
@@ -36,12 +37,17 @@ export const TimerInputs: React.FC<TimerInputsProps> = ({
   };
 
   return (
-    <section className="input-section" aria-labelledby="timer-input-heading">
+    <section
+      className={styles.inputSection}
+      aria-labelledby="timer-input-heading"
+    >
       <h2 id="timer-input-heading" className="sr-only">
         タイマー設定
       </h2>
-      <div className="input-group" role="group" aria-label="時間設定">
-        <label htmlFor="minutes-input">分:</label>
+      <div className={styles.inputGroup} role="group" aria-label="時間設定">
+        <label htmlFor="minutes-input" className={styles.label}>
+          分:
+        </label>
         <input
           id="minutes-input"
           type="number"
@@ -53,8 +59,11 @@ export const TimerInputs: React.FC<TimerInputsProps> = ({
           }
           disabled={isRunning}
           aria-label="分を設定"
+          className={styles.numberInput}
         />
-        <label htmlFor="seconds-input">秒:</label>
+        <label htmlFor="seconds-input" className={styles.label}>
+          秒:
+        </label>
         <input
           id="seconds-input"
           type="number"
@@ -66,8 +75,11 @@ export const TimerInputs: React.FC<TimerInputsProps> = ({
           }
           disabled={isRunning}
           aria-label="秒を設定"
+          className={styles.numberInput}
         />
-        <label htmlFor="milliseconds-input">ms:</label>
+        <label htmlFor="milliseconds-input" className={styles.label}>
+          ms:
+        </label>
         <input
           id="milliseconds-input"
           type="number"
@@ -80,6 +92,7 @@ export const TimerInputs: React.FC<TimerInputsProps> = ({
           }
           disabled={isRunning}
           aria-label="ミリ秒を設定"
+          className={styles.numberInput}
         />
       </div>
     </section>

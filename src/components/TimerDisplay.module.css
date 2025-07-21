@@ -1,0 +1,26 @@
+.display {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 30px 0;
+  font-family: "Inter", "Roboto", sans-serif;
+  letter-spacing: 4px;
+  font-variant-numeric: tabular-nums;
+  width: 280px;
+}
+
+.finished {
+  animation: pulse 1s infinite;
+  color: #ff6b6b;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

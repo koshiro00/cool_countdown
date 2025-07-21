@@ -1,5 +1,6 @@
 import React from "react";
 import { formatTime } from "../utils/timer";
+import styles from "./TimerDisplay.module.css";
 
 interface TimerDisplayProps {
   totalMilliseconds: number;
@@ -11,7 +12,7 @@ export const TimerDisplay: React.FC<TimerDisplayProps> = ({
   isFinished,
 }) => {
   return (
-    <div className={`display ${isFinished ? "finished" : ""}`}>
+    <div className={`${styles.display} ${isFinished ? styles.finished : ""}`}>
       {formatTime(totalMilliseconds)}
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import { formatTime } from "../utils/timer";
 import type { FullscreenTheme } from "../hooks/useFullscreenTheme";
+import styles from "./FullscreenMode.module.css";
 
 interface FullscreenModeProps {
   isVisible: boolean;
@@ -22,9 +23,9 @@ export const FullscreenMode: React.FC<FullscreenModeProps> = ({
   if (!isVisible) return null;
 
   return (
-    <div className={`fullscreen-mode ${theme}`}>
+    <div className={`${styles.fullscreenMode} ${styles[theme]}`}>
       <button
-        className="close-btn"
+        className={styles.closeBtn}
         onClick={onClose}
         aria-label="フルスクリーンを閉じる"
       >
@@ -32,23 +33,31 @@ export const FullscreenMode: React.FC<FullscreenModeProps> = ({
       </button>
 
       {/* トグル形式のテーマ切り替えボタン */}
-      <div className="theme-toggle-container">
+      <div className={styles.themeToggleContainer}>
         <button
-          className={`theme-toggle-option ${theme === "dark" ? "active" : ""}`}
+          className={`${styles.themeToggleOption} ${
+            theme === "dark" ? styles.active : ""
+          }`}
           onClick={() => theme !== "dark" && onToggleTheme()}
           aria-label="ダークテーマ"
         >
           🌙
         </button>
         <button
-          className={`theme-toggle-option ${theme === "light" ? "active" : ""}`}
+          className={`${styles.themeToggleOption} ${
+            theme === "light" ? styles.active : ""
+          }`}
           onClick={() => theme !== "light" && onToggleTheme()}
           aria-label="ライトテーマ"
         >
           ☀️
         </button>
       </div>
-      <div className={`fullscreen-display ${isFinished ? "finished" : ""}`}>
+      <div
+        className={`${styles.fullscreenDisplay} ${
+          isFinished ? styles.finished : ""
+        }`}
+      >
         {formatTime(totalMilliseconds)}
       </div>
     </div>

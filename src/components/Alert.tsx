@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Alert.module.css";
 
 interface AlertProps {
   message: string;
@@ -8,5 +9,5 @@ interface AlertProps {
 export const Alert: React.FC<AlertProps> = ({ message, isVisible }) => {
   if (!isVisible) return null;
 
-  return <div className="alert">{message}</div>;
+  return <div className={styles.alert}>{message}</div>;
 };

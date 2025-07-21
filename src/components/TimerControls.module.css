@@ -1,0 +1,98 @@
+.controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.startBtn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(76, 175, 80, 0.8);
+  border: 2px solid rgba(76, 175, 80, 1);
+  color: white;
+}
+
+.startBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.startBtn:active {
+  transform: translateY(0);
+}
+
+.pauseBtn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 193, 7, 0.8);
+  border: 2px solid rgba(255, 193, 7, 1);
+  color: white;
+}
+
+.pauseBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pauseBtn:active {
+  transform: translateY(0);
+}
+
+.resetBtn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(244, 67, 54, 0.8);
+  border: 2px solid rgba(244, 67, 54, 1);
+  color: white;
+}
+
+.resetBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.resetBtn:active {
+  transform: translateY(0);
+}

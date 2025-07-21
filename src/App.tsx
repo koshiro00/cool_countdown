@@ -7,7 +7,7 @@ import { TimerControls } from "./components/TimerControls";
 import { FullscreenMode } from "./components/FullscreenMode";
 import { Alert } from "./components/Alert";
 import type { TimerConfig } from "./types/timer";
-import "./App.css";
+import styles from "./App.module.css";
 
 const initialConfig: TimerConfig = {
   minutes: 5,
@@ -80,13 +80,13 @@ const App: React.FC = () => {
       </div>
 
       <main
-        className="timer-container"
+        className={styles.timerContainer}
         role="main"
         aria-label="カウントダウンタイマーアプリケーション"
       >
         <header>
-          <h1>イケてるカウントダウン</h1>
-          <p className="subtitle">高精度ミリ秒対応タイマー</p>
+          <h1 className={styles.title}>イケてるカウントダウン</h1>
+          <p className={styles.subtitle}>高精度ミリ秒対応タイマー</p>
         </header>
 
         <TimerInputs

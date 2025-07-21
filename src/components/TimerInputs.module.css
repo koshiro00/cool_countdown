@@ -1,0 +1,38 @@
+.inputSection {
+  margin-bottom: 30px;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 1.1rem;
+  min-width: 60px;
+}
+
+.numberInput {
+  width: 80px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.numberInput:focus {
+  outline: none;
+  background: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.numberInput:disabled {
+  background: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+}
