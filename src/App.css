@@ -184,22 +184,67 @@ button:active {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+/* ダークテーマ（デフォルト） */
+.fullscreen-mode.dark {
+  background: black;
+}
+
+.fullscreen-mode.dark .fullscreen-display {
+  color: white;
+}
+
+.fullscreen-mode.dark .close-btn,
+.fullscreen-mode.dark .theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.fullscreen-mode.dark .close-btn:hover,
+.fullscreen-mode.dark .theme-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ライトテーマ */
+.fullscreen-mode.light {
+  background: white;
+}
+
+.fullscreen-mode.light .fullscreen-display {
+  color: black;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.fullscreen-mode.light .close-btn,
+.fullscreen-mode.light .theme-toggle-btn {
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  color: black;
+}
+
+.fullscreen-mode.light .close-btn:hover,
+.fullscreen-mode.light .theme-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.5);
 }
 
 .fullscreen-display {
   font-size: 19vw;
-  color: white;
   font-family: "Inter", "Roboto", sans-serif;
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.08em;
   font-variant-numeric: tabular-nums;
   width: 100vw;
+  transition: color 0.3s ease;
 }
 
 @keyframes subtle-glow {
@@ -219,10 +264,7 @@ button:active {
   left: 20px;
   width: 50px;
   height: 50px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  color: white;
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
@@ -233,7 +275,84 @@ button:active {
   z-index: 10000;
 }
 
-.close-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.5);
+.theme-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 10000;
+}
+
+/* トグル形式のテーマ切り替え */
+.theme-toggle-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 4px;
+  gap: 2px;
+  z-index: 10000;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.theme-toggle-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.theme-toggle-option:hover {
+  transform: scale(1.1);
+}
+
+.theme-toggle-option.active {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ダークテーマでのトグル */
+.fullscreen-mode.dark .theme-toggle-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.fullscreen-mode.dark .theme-toggle-option {
+  color: white;
+}
+
+.fullscreen-mode.dark .theme-toggle-option.active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ライトテーマでのトグル */
+.fullscreen-mode.light .theme-toggle-container {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.fullscreen-mode.light .theme-toggle-option {
+  color: black;
+}
+
+.fullscreen-mode.light .theme-toggle-option.active {
+  background: rgba(0, 0, 0, 0.2);
 }

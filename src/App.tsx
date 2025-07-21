@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTimer } from "./hooks/useTimer";
+import { useFullscreenTheme } from "./hooks/useFullscreenTheme";
 import { TimerInputs } from "./components/TimerInputs";
 import { TimerDisplay } from "./components/TimerDisplay";
 import { TimerControls } from "./components/TimerControls";
@@ -17,6 +18,8 @@ const initialConfig: TimerConfig = {
 const App: React.FC = () => {
   const [config, setConfig] = useState<TimerConfig>(initialConfig);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const { theme: fullscreenTheme, toggleTheme: toggleFullscreenTheme } =
+    useFullscreenTheme();
 
   // SEO: ページタイトルを動的に更新
   useEffect(() => {
@@ -112,7 +115,9 @@ const App: React.FC = () => {
         isVisible={isFullscreen}
         totalMilliseconds={timerState.totalMilliseconds}
         isFinished={timerState.isFinished}
+        theme={fullscreenTheme}
         onClose={handleCloseFullscreen}
+        onToggleTheme={toggleFullscreenTheme}
       />
     </>
   );
