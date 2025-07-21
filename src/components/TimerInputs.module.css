@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 3px;
   margin-bottom: 24px;
   flex-wrap: wrap;
   /* メディアクエリ */
@@ -18,7 +18,7 @@
 }
 
 .label {
-  font-size: 0.875rem;
+  font-size: 16px;
   font-weight: 500;
   color: #475569;
   min-width: 60px;

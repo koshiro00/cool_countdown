@@ -71,6 +71,7 @@
   height: 4px;
   background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
   border-radius: 24px 24px 0 0;
+  margin: 0 12px;
 }
 
 .title {

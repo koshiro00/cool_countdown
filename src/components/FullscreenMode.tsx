@@ -1,6 +1,7 @@
 import React from "react";
 import { formatTime } from "../utils/timer";
 import type { FullscreenTheme } from "../hooks/useFullscreenTheme";
+import { HiMoon, HiSun } from "react-icons/hi2";
 import styles from "./FullscreenMode.module.css";
 
 interface FullscreenModeProps {
@@ -41,7 +42,7 @@ export const FullscreenMode: React.FC<FullscreenModeProps> = ({
           onClick={() => theme !== "dark" && onToggleTheme()}
           aria-label="ダークテーマ"
         >
-          🌙
+          <HiMoon size={20} />
         </button>
         <button
           className={`${styles.themeToggleOption} ${
@@ -50,7 +51,7 @@ export const FullscreenMode: React.FC<FullscreenModeProps> = ({
           onClick={() => theme !== "light" && onToggleTheme()}
           aria-label="ライトテーマ"
         >
-          ☀️
+          <HiSun size={20} />
         </button>
       </div>
       <div
