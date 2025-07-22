@@ -14,6 +14,17 @@
 - ⚡ **高速起動** - ブラウザですぐに使用開始
 - 🎨 **モダンUI** - 白背景ベースの洗練されたデザイン
 
+## ⌛️ UI
+- 設定画面
+<img width="975" height="627" alt="スクリーンショット 2025-07-22 17 33 46" src="https://github.com/user-attachments/assets/c54a1eaf-9483-4bb7-97a9-46c9bbbf43b0" />
+
+- カウントダウン画面（ライトモード）
+<Video src="https://github.com/user-attachments/assets/16e76de4-e62b-4728-9f8d-fc7317d84cf1" /> |
+
+- カウントダウン画面（ダークモード）
+<Video src="https://github.com/user-attachments/assets/173f3335-2ebb-4b6a-8ff0-0fb822a1b03d" /> |
+
+
 ## 🚀 技術スタック
 
 このプロジェクトは最新のWeb技術で構築されています：
