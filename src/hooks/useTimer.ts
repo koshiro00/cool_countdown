@@ -71,8 +71,7 @@ export const useTimer = (initialConfig: TimerConfig) => {
           if (intervalRef.current) {
             clearInterval(intervalRef.current);
           }
-          playBeep();
-          window.alert("時間になりました！");
+          playBeep(); // ビープ音を再生
           return {
             ...prev,
             totalMilliseconds: 0,
