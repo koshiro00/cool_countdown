@@ -63,11 +63,14 @@ export const useTimer = (initialConfig: TimerConfig) => {
 
     setTimerState((prev) => ({ ...prev, isRunning: true, isFinished: false }));
 
-    intervalRef.current = setInterval(() => {
-      setTimerState((prev) => {
-        const newTotal = prev.totalMilliseconds - 10;
+    // 固定値を引き続けると誤差が蓄積するため、終了予定時刻からの差分で残り時間を算出する
+    const endTime = performance.now() + timerState.totalMilliseconds;
 
-        if (newTotal <= 0) {
+    intervalRef.current = setInterval(() => {
+      const remaining = endTime - performance.now();
+
+      setTimerState((prev) => {
+        if (remaining <= 0) {
           if (intervalRef.current) {
             clearInterval(intervalRef.current);
           }
@@ -82,7 +85,7 @@ export const useTimer = (initialConfig: TimerConfig) => {
 
         return {
           ...prev,
-          totalMilliseconds: newTotal,
+          totalMilliseconds: remaining,
         };
       });
     }, 10);
